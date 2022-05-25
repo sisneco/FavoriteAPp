@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>お気に入り店舗登録</title>
+    <link rel="stylesheet" href="./css/style1.css">
+    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./css/style2.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.js"></script>
+  </head>
+  <body>
+    <div id="navigation">
+      <ul>
+        <li class="logo"><span>FavoriteStore!</span></li>
+        <li class="current"><a href="#">Top</a></li>
+        <li><a href="#">お気に入り</a></li>
+        <li><a href="#">来店履歴</a></li>
+        <li><a href="#">お問い合わせ</a></li>
+      </ul>
+    </div>
+
+    <div id="mapclearfix">
+    <div id="mapbox">
+    <div id="map"></div>
+    </div>
+
+    <div id="mapTool">
+      <h2 class="min_heading">緯度経度:住所で検索</h2>
+
+      <div id="lngbox">
+      <label for="lng"class="l_text">longitude:経度</label>
+      <input class="i_text" type="text" placeholder="数値を入力してください">
+      <div class="text_underline"></div>
+      </div>
+
+      <div id="latbox">
+      <label for="lat"class="l_text">latitude:緯度</label>
+      <input class="i_text" type="text" placeholder="数値を入力してください">
+      <div class="text_underline"></div>
+      </div>
+
+      <div id="addbox">
+      <label for="lat"class="l_text">address:住所</label>
+      <input class="i_text" type="text" placeholder="住所を入力してください">
+      <div class="text_underline"></div>
+      </div>
+
+
+      <a class="btn btn-flat"><span>検索</span></a>
+    </div>
+
+    <div id="currentinfo">
+      <h2 class="min_heading">マーカー位置</h2>
+
+      <div class="currentbox">
+      <label for="lng"class="l_text">longitude:経度</label>
+      <p id="currentLng">&emsp;</p>
+      <div class="text_underline"></div>
+    </div>
+
+      <div class="currentbox">
+
+      <label for="lat"class="l_text">latitude:緯度</label>
+      <p id="currentLat">&emsp;</p>
+      <div class="text_underline"></div>
+    </div>
+
+    <div class="currentbox">
+
+      <label for="lng"class="l_text">address:住所</label>
+      <p id="address">&emsp;</p>
+      <div class="text_underline"></div>
+    </div>
+    </div>
+
+  </div>
+
+<div id="info">
+  <ul>
+    <li><a href="" id="favo">favo!</a></li>
+    <form  name ="favoForm" action="http://localhost:8080/QuizGameWeb10j_minami/img/JapanQuiz/region8.png" method="post">
+      <input type="hidden" name="jsonData">
+    </form>
+    <li><a href="#" id="line">LINE</a></li>
+    <li><a href="#" id="twitter">Twitter</a></li>
+    <li><a id="currentBtn">現在地</a></li>
+  </ul>
+</div>
+
+
+    <div id="copyright">
+
+    </div>
+
+    <script src="./js/">
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDThs31WIwr5FfGnx-W_hGwde9KSmi9fSY&callback=initMap&v=weekly"async></script>
+    <script src="./js/sample.js"></script>
+    <script src="./js/fontsample.js"></script>
+    </body>
+</html>

@@ -1,0 +1,275 @@
+/* google fonts*/
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Smooch&display=swap" rel="stylesheet">
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;/*rem算出をしやすくするために*/
+}
+
+/* navigation menu*/
+div#navigation{
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #cccccc;
+}
+
+#navigation ul{
+  margin: 0;
+  padding: 0;
+  list-style:  none
+}
+
+#navigation li a{
+  font-size: 20px;
+  padding:5px;
+  color: #000000;
+  text-decoration: none;
+  display: block;
+  position: relative;
+}
+
+#navigation ul:after{
+  content : "";
+  display: block;
+  clear: both
+}
+
+#navigation li{
+  float: left;
+  width: 17.5%;
+}
+
+#navigation li a:after{
+  content:"";
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  bottom: 0;
+  left:10%;
+  /*線の形状*/
+  width: 80%;
+  height: 2px;
+  background:#4169e1;
+  /*アニメーションの設定*/
+  transition: all .3s;
+  transform: scale(0,1);
+  transform-origin:center top;
+}
+
+/*現在地とhoverの認定*/
+#navigation li .current a::after,
+#navigation li a:hover::after{
+  transform: scale(1,1);
+}
+
+/*Menu Title*/
+#navigation li.logo{
+  font-size: 20px;
+  height: 40.4px;
+  width: 30%;
+}
+
+#navigation li span{
+  float: left;
+  font-family: 'Smooch', cursive;
+  font-size: 36px;
+  font-weight: bold;
+  border-left: 6px double #808080;
+  padding-left: 10px;
+  line-height: 40.4px;
+}
+
+#navigation li.current a,
+#navigation li a:hover{
+  color:#4169e1;
+}
+
+/* google map css*/
+
+#mapbox{
+  float: left;
+  height: 400px;
+  width: 75%;
+}
+
+#map{
+  height: 436px;
+  width: 95%;
+  margin-left: 20px;
+}
+
+/* google map tool*/
+#mapTool .min_heading{
+  padding: 2px 4px;
+  max-width: 75%;
+  border-left: 5px solid #ffaf58;
+  background:#fef4f4;
+  color: #513743;
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.i_text{
+  font-size: 14px;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding-bottom: 8px;
+  box-sizing: border-box;
+}
+
+.text_underline{
+  position: relative;
+  border-top: 1px solid #c2c2c2
+}
+
+.text_underline::before,
+.text_underline::after{
+  position: absolute;
+  bottom: 0px;
+  width: 0px;
+  height: 1px;
+  content: "";
+  background-color: #3be5ae;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.i_text:focus + .text_underline::before{
+  width: 100%
+}
+
+.i_text{
+  margin-top: 2px;
+}
+/*current info*/
+#currentinfo{
+  margin-top: 20px;
+}
+
+#currentinfo p{
+  font-size: 14px;
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+#currentinfo .min_heading{
+  padding: 2px 4px;
+  max-width: 45%;
+  border-left: 5px solid #ffaf58;
+  background:#fef4f4;
+  color: #513743;
+}
+
+#currentinfo p#address{
+  font-size: 11px;
+}
+
+.currentbox{
+  margin-bottom: 5px;
+}
+
+/* info&share */
+#info{
+  margin-left: 20px;
+  margin-top:30px;
+}
+
+#info ul{margin: 0;
+padding: 0;
+list-style: none}
+
+#info li a{
+  display: block;
+  text-decoration: none;
+  padding: 5px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#info li a:hover{
+  box-shadow: -0px 3px 5px 0px rgba(0,0,0,0.2);
+}
+
+#info ul::after{content: "";
+display: block;
+clear: both;}
+
+#info li{
+  float: left;
+  width: 25%;
+}
+
+a#favo{
+  background-color: #ed008c;
+  color: #fff;
+}
+
+a#line{
+  background-color: #00c330;
+  color: #fff;
+}
+
+a#twitter{
+  background-color: #1da1f2;
+  color: #fff;
+}
+
+a#currentBtn{
+  background-color: #ccc;
+  color: #fff;
+}
+
+#info a:hover{
+  cursor: pointer;
+}
+
+/*box design*/
+#mapTool,#currentinfo{
+  float: left;
+  width: 25%;
+}
+
+#lngbox,#lngbox,#addbox{
+  margin: 4px 0;
+}
+
+#mapclearfix{
+  margin-top: 40px;
+}
+
+#mapclearfix:after{
+  content:"";
+  display: block;
+  clear: both;
+}
+
+
+/*responsive*/
+@media (min-width:1000px) {
+  body{
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width:1200px) {
+  body{
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+}
